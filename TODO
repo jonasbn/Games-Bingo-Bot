@@ -1,0 +1,48 @@
+TODO for Games::Bingo::Bot
+
+$Id: TODO,v 1.3 2003/06/23 21:43:49 jonasbn Exp $
+
+- Implement use of App::Config or a similar module for easier
+  configuration and use
+
+- Implement auto and noauto commands. At this time I am not sure how
+  this should be done. Should it be done using a child process to run the
+  game, or should I just implement a sort of broadcast functionality?
+  
+  See: 
+  
+  	Child processes: http://poe.perl.org/?POE_Cookbook/Child_Processes
+  	
+  	Broadcast: http://poe.perl.org/?POE_Cookbook/Broadcasting_Events
+  
+  Or should this be done by using IRC as communication media, reacting on
+  own commands, ugly but simple :)
+  
+- Implement handling of nick changes so a game follows a user
+ 
+- Implement user check so in case of spontane disconnects followed by
+  connects a user can resume a game under his new nick
+ 
+- Implement resuming of running game after spontaneous disconnect of the 
+  bot
+
+- Write tests of the IRC commands (should these go into a module?)
+
+- Write docs on the IRC commands (see above)
+
+- Implement functionality to start a new game automatically when a game
+  is over. This could be done by pilfering with the constructor
+  
+- Implement point system (should "bingo" commands issue negative points
+  when the player does not have bingo?)
+  
+- Improve the output of the 'pulled' command so it shows a more console
+  like output (see Games::Bingo, the bingo.pl script)
+  
+- Improve the output of the 'show' command to show a console like card
+
+- Add a rules command
+
+- Should all commands be prefix with the name of the bot? now it would
+  trigger on alot of works. So if it is supposed to run in a public
+  channel it could prove annoying.
